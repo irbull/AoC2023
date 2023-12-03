@@ -47,7 +47,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             match caps.name("digit") {
                 Some(digit) => {
                     if connected(digit.start(), digit.end(), row, &positions) {
-                        println!("{}{:?}{}", row, digit, "connected horizontally");
                         sum += digit.as_str().parse::<i32>()?;
                     }
                 }
